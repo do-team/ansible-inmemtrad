@@ -1,0 +1,16 @@
+---
+
+- name: Install the redis packages.
+  yum: name="{{ item }}" state=installed enablerepo=epel
+  with_items:
+    - "{{ redis_packages }}"
+
+- name: Template for redis conf.
+  template:
+    src: redis.conf.j2
+    dest: "{{ redis_conf_file }}"
+
+- name: Start redis service.
+  service: name="{{ item }}" enabled=yes state=started
+  with_items:
+    - "{{ redis_packages }}"

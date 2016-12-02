@@ -1,0 +1,6 @@
+---
+
+docker_repo_file: "/etc/yum.repos.d/docker.repo"
+
+docker_packages:
+  - docker-engine

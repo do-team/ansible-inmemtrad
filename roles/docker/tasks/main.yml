@@ -1,0 +1,15 @@
+---
+- name: Template for docker repo.
+  template:
+    src: docker.repo.j2
+    dest: "{{ docker_repo_file }}"
+
+- name: Install the docker packages.
+  yum: name="{{ item }}" state=installed
+  with_items:
+    - "{{ docker_packages }}"
+
+- name: Start start docker service.
+  service: name="{{ item.name }}" enabled=yes state=started
+  with_items:
+    - { name: "docker" }
