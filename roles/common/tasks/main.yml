@@ -1,0 +1,11 @@
+---
+
+- name: Install the base packages.
+  yum: name="{{ item }}" state=installed enablerepo=epel
+  with_items:
+    - "{{ base_packages }}"
+
+- name: Install the base packages.
+  pip: name="{{ item }}" state=latest
+  with_items:
+    - "{{ pip_packages }}"

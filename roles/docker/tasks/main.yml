@@ -13,3 +13,12 @@
   service: name="{{ item.name }}" enabled=yes state=started
   with_items:
     - { name: "docker" }
+
+- name: Pull David image
+  docker_image:
+    name: davesade/algo
+
+- name: Start David container with a command
+  docker_container:
+    name: algo
+    image: davesade/algo

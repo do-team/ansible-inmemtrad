@@ -40,5 +40,6 @@
   become: true
   roles:
     - epel
+    - common
     - redis
     - docker
