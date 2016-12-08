@@ -34,7 +34,7 @@
 
 # By default Redis does not run as a daemon. Use 'yes' if you need it.
 # Note that Redis will write a pid file in /var/run/redis.pid when daemonized.
-daemonize no
+daemonize yes
 
 # When running daemonized, Redis writes a pid file in /var/run/redis.pid by
 # default. You can specify a custom pid file location here.
@@ -67,8 +67,8 @@ bind 0.0.0.0
 # incoming connections. There is no default, so Redis will not listen
 # on a unix socket when not specified.
 #
-#unixsocket /tmp/redis.sock
-#unixsocketperm 700
+unixsocket /tmp/redis.sock
+unixsocketperm 777
 
 # Close the connection after a client is idle for N seconds (0 to disable)
 timeout 0
