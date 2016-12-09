@@ -1,0 +1,14 @@
+---
+- name: rerun all shits
+  hosts: tag_Name_zu697_IMT_host
+  gather_facts: no
+  user: ec2-user
+  become: true
+  vars_files:
+    - group_vars/vars/david.dev
+  roles:
+    - epel
+    - common
+    - sbaerlocher.redis
+    - docker
+
