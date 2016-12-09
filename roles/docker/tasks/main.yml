@@ -20,11 +20,24 @@
     groups: ec2-user,wheel,docker
     append: yes
 
-- name: Pull David image
+- name: Pull Redis image
+  docker_image:
+    name: redis
+
+- name: Pull algo image
   docker_image:
     name: davesade/algo
 
-- name: Start David container with a command
+- name: Start redis container
+  docker_container:
+    name: redis
+    image: redis
+    ports:
+      - "6379:6379"
+
+- name: Start algo container, linking with Redis
   docker_container:
     name: algo
     image: davesade/algo
+    links:
+      - "redis:redis"

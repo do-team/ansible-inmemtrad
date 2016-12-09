@@ -9,6 +9,5 @@
   roles:
     - epel
     - common
-    - sbaerlocher.redis
     - docker
 
