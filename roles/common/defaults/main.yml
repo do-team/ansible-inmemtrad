@@ -3,7 +3,6 @@ base_packages:
   - git
   - htop
   - mc
-  - python-pip
 
 pip_packages:
   - docker-py

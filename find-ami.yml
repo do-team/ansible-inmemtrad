@@ -7,9 +7,9 @@
   tasks:
     - name: Get the info from an AMI
       ec2_ami_find:
-        name: "CentOS Linux 7*"
-        owner: 679593333241
-        #ami_id: "ami-9bf712f4"
+        #name: ""
+        #owner: 679593333241
+        ami_id: "ami-f9619996"
         region: eu-central-1
         sort: creationDate
         sort_order: descending

@@ -5,17 +5,17 @@
   vars_files:
     - group_vars/vars/david.dev
   tasks:
-    - name: Get the latest RedHat AMI-ID
+    - name: Get the latest AMZ AMI-ID
       ec2_ami_find:
-        name: "RHEL-7.3_HVM_GA*"
-        owner: "{{ owner_id_redhat }}"
+        name: "amzn-ami-hvm*-gp2"
+        owner: "{{ owner_id_amazon }}"
         region: "{{ region }}"
         sort: creationDate
         sort_order: descending
         sort_end: 1
       register: ami_find
 
-    - name: Launch RedHat ec2 instance
+    - name: Launch AMZ ec2 instance
       ec2:
          key_name: "{{ key_name }}"
          instance_type: "{{ instance_type }}"
@@ -41,5 +41,5 @@
   roles:
     - epel
     - common
-    - redis
+    - sbaerlocher.redis
     - docker

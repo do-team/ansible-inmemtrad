@@ -14,6 +14,12 @@
   with_items:
     - { name: "docker" }
 
+- user:
+    name: ec2-user
+    shell: /bin/bash
+    groups: ec2-user,wheel,docker
+    append: yes
+
 - name: Pull David image
   docker_image:
     name: davesade/algo
