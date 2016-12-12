@@ -6,3 +6,5 @@ See the app: [NodeJS version](https://github.com/do-team/inmemtrad) and [Python 
 
 App is currently deployed via [Docker](https://hub.docker.com/r/davesade/algo/), simulating custom code of trade members,
 deploying their own algo trading on the backend host.
+
+Redis database is also deployed to [Docker container](https://hub.docker.com/_/redis/).

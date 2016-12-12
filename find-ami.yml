@@ -3,12 +3,10 @@
   hosts: localhost
   gather_facts: no
   vars_files:
-    - group_vars/vars/david.dev
+    - group_vars/vars/imt_env.dev
   tasks:
     - name: Get the info from an AMI
       ec2_ami_find:
-        #name: ""
-        #owner: 679593333241
         ami_id: "ami-f9619996"
         region: eu-central-1
         sort: creationDate

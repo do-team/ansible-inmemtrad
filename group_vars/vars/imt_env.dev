@@ -1,0 +1,13 @@
+#imt_env.dev
+key_name: zu697-0451.pem
+instance_type: t2.micro
+security_group: sec-zu697-future
+image_redhat: ami-875042eb
+image_centos: ami-9bf712f4
+image_amz: ami-a228eecd
+region: eu-central-1
+vpc_subnet_id: subnet-3ba71253
+instance_tag: zu697-IMT-host
+owner_id_redhat: 309956199498
+owner_id_centos: 679593333241
+owner_id_amazon: 137112412989

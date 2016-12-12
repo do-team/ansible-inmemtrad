@@ -1,11 +1,11 @@
 ---
-- name: rerun all shits
+- name: Rerun all scripts after EC2 is available (update)
   hosts: tag_Name_zu697_IMT_host
   gather_facts: no
   user: ec2-user
   become: true
   vars_files:
-    - group_vars/vars/david.dev
+    - group_vars/vars/imt_env.dev
   roles:
     - epel
     - common

@@ -1,4 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
-/group_vars/*
 /*.retry
 /assumedRole.pkl
+/.idea/
